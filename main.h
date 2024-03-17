@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
-int _putchar(char c);
 
+/*User defined prototypes*/
+int _putchar(char c);
+int _printf(const char *format, ...);
+
+
+/*Standard header files*/
+#include <stdarg.h>
 
 #endif
