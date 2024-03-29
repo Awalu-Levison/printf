@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 			i++;
 			j++;
 		}
+		j += 1;
 	}
 	va_end(args);
 	return (j);
