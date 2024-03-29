@@ -7,41 +7,43 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, j = 0;
+	int i = 0;
 
-	va_list args;
+	va_list mylist;
 
-	va_start(args, format);
+	va_start(mylist, format);
 
-	for (; format[i] != '\0'; i++)
+	if (format == NULL)
+		return (-1);
+
+	while (*format)
 	{
-		if (format[i] != '%')
+		if (*format != '%')
 		{
-			char_print(format[i]);
-		}
-		else if (format[i + 1] == 'c')
-		{
-			char_print(va_arg(args, int));
+			char_print(format);
 			i++;
-			j++;
 		}
-		else if (format[i + 1] == 's')
+		else
 		{
-			char *mystr = va_arg(args, char *);
+			format++;
+			if (*format == '\0')
+				break;
+			if (*format == '%')
+			{
+				char_print(format);
+				i++;
+			}
+			else if (*format == 'c')
+			{
+				char mystr = va_arg(mylist, int);
 
-			int x = str_print(mystr);
-
-			j += x;
-			i++;
+				char_print(mystr);
+				i++;
+			}
 		}
-		else if (format[i + 1] == '%')
-		{
-			char_print('%');
-			i++;
-			j++;
-		}
-		j += 1;
+		format++;
 	}
-	va_end(args);
-	return (j);
+	va_end(mylist);
+	return (i);
+
 }
