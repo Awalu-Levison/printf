@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 
 			int x = str_print(mystr);
 
-			j += (x - 1);
+			j += x;
 			i++;
 		}
 		else if (format[i + 1] == '%')
