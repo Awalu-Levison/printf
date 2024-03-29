@@ -9,6 +9,5 @@
 /*User defined prototypes*/
 int char_print(char z);
 int _printf(const char *format, ...);
-int str_print(char *s);
 
 #endif
