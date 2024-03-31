@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - Customize the standard printf function
  * @format: The format specifier
@@ -7,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	unsigned int counter = 0;
 
 	va_list mylist;
 
@@ -16,34 +15,17 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (*format)
+	while (*format != '\0')
 	{
-		if (*format != '%')
-		{
-			char_print(format);
-			i++;
-		}
-		else
+		if (*format == '%')
 		{
 			format++;
-			if (*format == '\0')
-				break;
-			if (*format == '%')
-			{
-				char_print(format);
-				i++;
-			}
-			else if (*format == 'c')
-			{
-				char mystr = va_arg(mylist, int);
-
-				char_print(mystr);
-				i++;
-			}
+			counter += handle_format(format, mylist);
 		}
+		else
+			counter += write(1, &(*format), 1);
 		format++;
 	}
 	va_end(mylist);
-	return (i);
-
+	return (counter);
 }
