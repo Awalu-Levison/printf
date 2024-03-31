@@ -13,6 +13,7 @@ int handle_format(const char *format, va_list mylist);
 int char_print(char z);
 int length_str(char *mystr);
 int str_print(char *mystr);
+int get_int(int num);
 
 
 #endif
