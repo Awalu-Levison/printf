@@ -14,7 +14,8 @@ int str_print(char *mystr)
 	else
 	{
 		i = write(1, mystr, length_str(mystr));
-		counter += i;
+		counter++;
+		counter += i - 1;
 	}
 	return (counter);
 }
