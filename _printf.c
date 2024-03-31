@@ -25,6 +25,7 @@ int _printf(const char *format, ...)
 		else
 			counter += write(1, &(*format), 1);
 		format++;
+		counter += 1;
 	}
 	va_end(mylist);
 	return (counter);
