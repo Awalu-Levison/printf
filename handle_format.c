@@ -23,9 +23,5 @@ int handle_format(const char *format, va_list mylist)
 	{
 		i += char_print('%');
 	}
-	else if (*format == 'd' || *format == 'i')
-	{
-		get_int(va_arg(mylist, int));
-	}
 	return (i);
 }
