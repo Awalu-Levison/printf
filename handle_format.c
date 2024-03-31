@@ -17,7 +17,7 @@ int handle_format(const char *format, va_list mylist)
 	}
 	else if (*format == 's')
 	{
-		i += print_str(va_arg(mylist, char *));
+		i += str_print(va_arg(mylist, char *));
 	}
 	else if (*format == '%')
 	{
