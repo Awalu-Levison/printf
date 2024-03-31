@@ -6,5 +6,5 @@
  */
 int char_print(char z)
 {
-	return write(1, &z, 1);
+	return (write(1, &z, 1));
 }
