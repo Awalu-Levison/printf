@@ -15,7 +15,7 @@ int handle_format(char format, va_list mylist)
 		i += char_print(va_arg(mylist, int));
 
 	else if (format == 's')
-		i += str_print(va_arg(mylist, char *));
+		i += string_print(va_arg(mylist, char *));
 
 	else if (format == 'd')
 		i += digit_print((long)va_arg(mylist, int), 10);
