@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			counter += handle_format(format, mylist);
+			counter += handle_format(*format, mylist);
 		}
 		else
 			counter += write(1, &(*format), 1);
