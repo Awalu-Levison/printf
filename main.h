@@ -7,13 +7,14 @@
 #include <unistd.h>
 
 /*User defined prototypes*/
-int _printf(const char *format, ...);
-int len_str(char *mystr);
-int handle_format(const char *format, va_list mylist);
-int char_print(char z);
+int handle_format(char format, va_list mylist);
+int char_print(int z);
 int length_str(char *mystr);
-int str_print(char *mystr);
 int get_int(int num);
+int _printf(const char *format, ...);
+int digit_print(long num, int base);
+int string_print(char *mystr);
+int _strlen(char *mystr);
 
 
 #endif
