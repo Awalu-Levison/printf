@@ -6,15 +6,14 @@
  */
 int str_print(char *mystr)
 {
-	unsigned int i, counter = 0;
+	int counter;
 
-	if (mystr == NULL)
-		return (-1);
-
-	else
+	counter	= 0;
+	while (*mystr != '\0')
 	{
-		i = write(1, mystr, length_str(mystr));
-		counter += i;
+		char_print((int)*mystr);
+		counter++;
+		mystr++;
 	}
 	return (counter);
 }
