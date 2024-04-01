@@ -4,7 +4,7 @@
  * @z: The character passed to the function
  * Return: Number of characters printed
  */
-int char_print(char z)
+int char_print(int z)
 {
 	return (write(1, &z, 1));
 }
