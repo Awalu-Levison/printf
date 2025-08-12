@@ -190,3 +190,16 @@ alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
 alex@ubuntu:~/c/printf$ ./a.out
 1100010
 alex@ubuntu:~/c/printf$
+
+## Task 3. What one has not experienced, one will never understand in print
+
+Handle the following conversion specifiers:
+
+u
+o
+x
+X
+You don’t have to handle the flag characters
+You don’t have to handle field width
+You don’t have to handle precision
+You don’t have to handle the length modifiers
