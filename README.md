@@ -156,3 +156,37 @@ You don’t have to handle the flag characters
 You don’t have to handle field width
 You don’t have to handle precision
 You don’t have to handle the length modifiers
+
+## Task 1: 1. Education is when you read the fine print. Experience is what you get if you don't
+
+Handle the following conversion specifiers:
+
+d
+i
+You don’t have to handle the flag characters
+You don’t have to handle field width
+You don’t have to handle precision
+You don’t have to handle the length modifiers
+
+## Task 2: 2. With a face like mine, I do better in print
+#advanced
+Handle the following custom conversion specifiers:
+
+b: the unsigned int argument is converted to binary
+alex@ubuntu:~/c/printf$ cat main.c
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%b\n", 98);
+    return (0);
+}
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
+alex@ubuntu:~/c/printf$
